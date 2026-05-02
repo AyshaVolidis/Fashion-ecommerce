@@ -12,7 +12,8 @@ const useAuthStore = create((set) => ({
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/auth/signup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, password })
+        body: JSON.stringify({ name, email, password }),
+        credentials: 'include'
       });
 
       const data = await res.json();
@@ -47,7 +48,8 @@ const useAuthStore = create((set) => ({
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/auth/signin`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password })
+        body: JSON.stringify({ email, password }),
+        credentials: 'include'
       });
 
       const data = await res.json();
@@ -107,4 +109,5 @@ const useAuthStore = create((set) => ({
 }));
 
 export default useAuthStore;
+
 
