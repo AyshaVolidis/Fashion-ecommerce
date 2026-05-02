@@ -1,4 +1,7 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+let API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+if (!API_URL.endsWith('/api')) {
+  API_URL += '/api';
+}
 
 const fetchOptions = {
   credentials: 'include'
@@ -69,4 +72,5 @@ export const getUserOrders = async () => {
   if (!res.ok) throw new Error('Failed to fetch orders');
   return res.json();
 };
+
 

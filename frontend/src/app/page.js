@@ -43,7 +43,7 @@ export default function Home() {
             <img
               src={heroImage.src}
               alt="Fashion"
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-top"
             />
             <div className="absolute inset-0 bg-black/20 flex flex-col justify-center items-center text-center z-10 p-8">
               <h1 className="text-white text-4xl md:text-5xl mb-4 max-w-md">
@@ -168,4 +168,5 @@ export default function Home() {
     </main>
   );
 }
+
 
