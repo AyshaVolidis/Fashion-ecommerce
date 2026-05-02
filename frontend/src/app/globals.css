@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background: #fafaf8;
+  color: #1a1a1a;
+}
+
+/* Typography */
+@layer base {
+  h1 {
+    @apply text-5xl md:text-7xl font-light tracking-tight;
+  }
+  h2 {
+    @apply text-4xl md:text-5xl font-light tracking-tight;
+  }
+  h3 {
+    @apply text-2xl font-light;
+  }
+}
+
+/* Custom Components */
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 bg-black text-white rounded-full hover:bg-gray-900 transition duration-300 font-medium text-sm;
+  }
+  .btn-secondary {
+    @apply px-8 py-3 border border-black text-black rounded-full hover:bg-black hover:text-white transition duration-300 font-medium text-sm;
+  }
+  .badge {
+    @apply inline-block px-3 py-1 bg-amber-100 text-amber-900 text-xs rounded-full font-medium;
+  }
+}
+
+/* Hero Circular Overlay */
+.hero-circle {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-circle::after {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  top: -200px;
+  right: -200px;
+  z-index: 1;
+}
