@@ -12,7 +12,7 @@ const { errorHandler } = require('./middleware/errorMiddleware');
 const app = express();
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'https://fashion-ecommerce-tan.vercel.app/',
+  origin: process.env.FRONTEND_URL || 'https://fashion-ecommerce-tan.vercel.app',
   credentials: true
 }));
 app.use(express.json());
