@@ -1,4 +1,4 @@
-let API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+let API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://fashion-backend-2hgb.onrender.com/';
 if (!API_URL.endsWith('/api')) {
   API_URL += '/api';
 }
